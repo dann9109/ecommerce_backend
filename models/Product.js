@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { Product, Category, Tag } = require('.');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('./config/connection');
 
 // GET all products
 router.get('/', async (req, res) => {
